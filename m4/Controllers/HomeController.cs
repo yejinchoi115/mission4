@@ -12,17 +12,38 @@ namespace m4.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private MovieApplicationContext movieContext { get; set; }
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, MovieApplicationContext someName)
         {
             _logger = logger;
+            movieContext = someName;
+
         }
 
         public IActionResult Index()
         {
             return View();
         }
+        public IActionResult MyPodcasts()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult MovieForm()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        public IActionResult MovieForm(FormResponse fr)
+        {
+            //connect db later
+            movieContext.Add(fr);
+            movieContext.SaveChanges();
+
+            return View("Confirmation", fr);
+        }
         public IActionResult Privacy()
         {
             return View();
