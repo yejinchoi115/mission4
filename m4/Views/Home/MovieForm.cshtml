@@ -34,7 +34,14 @@
             <option value="false">No</option>
         </select><br />
 
-        <button type="submit">Submit Movie Form</button>
+        <label asp-for="LentTo">Lent To</label>
+        <input asp-for="LentTo" />
+        <br />
 
+        <label asp-for="Notes">Notes</label>
+        <input asp-for="Notes" /><br />
+
+        <button type="submit">Submit Movie Form</button>
+        <div asp-validation-summary="All"></div>
     </form>
 </div>

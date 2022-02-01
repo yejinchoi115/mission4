@@ -23,7 +23,9 @@ namespace m4.Models
                     Year="2012",
                     Director="Joss Whedon",
                     Rating = "PG-13",
-                    Edited = false
+                    Edited = false,
+                    LentTo = "Haneul Song",
+                    Notes = "For date"
                 },
                 new FormResponse
                 {
@@ -33,7 +35,9 @@ namespace m4.Models
                     Year = "2008",
                     Director = "Christopher Nolan",
                     Rating = "PG-13",
-                    Edited = false
+                    Edited = false,
+                    LentTo = "Morgan Jin",
+                    Notes = "For fun"
                 },
                 new FormResponse
                 {
@@ -43,10 +47,10 @@ namespace m4.Models
                     Year = "1999",
                     Director = "The Wachowski Brothers",
                     Rating = "R",
-                    Edited = false
+                    Edited = false,
+                    LentTo = "Henry Cho",
+                    Notes = "For his daughter"
                 }
-
-
 
             );
         }
